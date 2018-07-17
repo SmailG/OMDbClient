@@ -1,0 +1,218 @@
+﻿<Window x:Class="OMDbAPIClient.MovieDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OMDbAPIClient"
+        mc:Ignorable="d"
+        Title="Movie details" Height="770" Width="900" Closed="Window_Closed" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Title:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Title}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Year:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Year}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Rated:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Rated}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Released:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Released}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Runtime:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Runtime}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Genre:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Genre}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Director:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Director}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Writer:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Writer}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Actors:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Actors}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Plot:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Plot}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Country:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Country}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Awards:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Awards}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Poster:" Grid.Column="0"/>
+            <Image  Source="{Binding SelectedMovie.Poster}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Ratings:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.RatingsShow}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Metascore:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Metascore}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Imdb rating:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.ImdbRating}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Imdb votes:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.ImdbVotes}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="imdb ID:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.ImdbID}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Type:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Type}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="DVD:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.DVD}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Box office:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.BoxOffice}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Production:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Production}" Grid.Column="1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="11">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock VerticalAlignment="Center" Margin="10 0 20 0" TextWrapping="Wrap" Text="Website:" Grid.Column="0"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding SelectedMovie.Website}" Grid.Column="1"/>
+        </Grid>
+        
+
+
+
+
+    </Grid>
+</Window>
