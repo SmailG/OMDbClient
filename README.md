@@ -4,8 +4,9 @@
 
 - You can remove movies from favorites by pressing Remove from favorites from the context menu in the favorites tab
 - You can download the movie poster in the watched movies tab by pressing download poster from the context menu
-- Export Favorites in not implemented yet
 - You can select the imports folder in the watched tab by pressing the '...' button
+- Export favorites button is removed as favorites are asynchronusly updated when the user adds or removes items from favorites
+- Favorites are saved in Favoreties.txt as JSON, last path which is used in watched tab is saved in Lastpath.txt, last search is save in Lastsearch.txt 
 
 #Installing
 

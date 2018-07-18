@@ -23,11 +23,8 @@ namespace OMDbAPIClient.ViewModel
             get { return selectedMovie; }
             set
             {
-                if (selectedMovie == value) return;
                 selectedMovie = value;
-
                 OnPropertyChanged(new PropertyChangedEventArgs("SelectedMovie"));
-
             }
         }
         public bool IsClosed

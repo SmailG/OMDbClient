@@ -83,13 +83,11 @@
                 </Grid>
             </TabItem>
             <TabItem Name="FavoritesTab" Header="Favorites">
-                <Grid Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DockPanel.Dock="Top">
+                <Grid Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="11*"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-
-                    <GroupBox Header="Favorites" BorderBrush="Black" HorizontalAlignment="Stretch"  Margin="6" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch">
+                    <GroupBox Header="Favorites" BorderBrush="Black" HorizontalAlignment="Stretch"  Margin="2" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch">
                         <ListBox Name="FavoritesListBox" HorizontalAlignment="Stretch" SelectedItem="{Binding SelectedMovie}"  VerticalAlignment="Stretch" ItemsSource="{Binding FavoriteMovies}" >
                             <ListBox.ContextMenu>
                                 <ContextMenu>
@@ -115,7 +113,6 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </GroupBox>
-                    <Button Name="ExportFavoritesButton" Content="Export favorites" HorizontalAlignment="Right" VerticalAlignment="Top" Width="auto" Grid.Row="1" Margin="0,5,10,0" Padding="10,3"/>
                 </Grid>
             </TabItem>
             <TabItem Name="WatchedTab" Header="Watched" Height="22" VerticalAlignment="Top">
@@ -125,7 +122,7 @@
                         <RowDefinition/>
                         <RowDefinition Height="0.2*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Watched movies" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <GroupBox Header="Watched movies" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="2 2 2 0">
                         <ListBox ItemsSource="{Binding MovieCollection}" SelectedItem="{Binding SelectedMovie}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0">
                             <ListBox.ContextMenu>
                                 <ContextMenu>

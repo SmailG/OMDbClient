@@ -317,18 +317,18 @@ namespace OMDbAPIClient.ViewModel
         //Sorting
         private void Sorting(string sortParameter)
         {
-            if (sortParameter.Equals("sortybyyear"))
+            if (sortParameter.Equals("sortbyyear"))
             {
-                //MoviesView.GroupDescriptions.Remove(new PropertyGroupDescription("Type"));
-                //MoviesView.GroupDescriptions.Add(new PropertyGroupDescription("Year"));
-              //  MoviesView.SortDescriptions.Add(new SortDescription("Year", ListSortDirection.Descending));
+                MoviesView.GroupDescriptions.Remove(new PropertyGroupDescription("Type"));
+                MoviesView.GroupDescriptions.Add(new PropertyGroupDescription("Year"));
+                MoviesView.SortDescriptions.Add(new SortDescription("Title", ListSortDirection.Ascending));
             }
 
             else if (sortParameter.Equals("sortbytype"))
             {
-                //MoviesView.GroupDescriptions.Remove(new PropertyGroupDescription("Year"));
-                // MoviesView.GroupDescriptions.Add(new PropertyGroupDescription("Year"));
-                // MoviesView.SortDescriptions.Add(new SortDescription("Title", ListSortDirection.Descending));
+                MoviesView.GroupDescriptions.Remove(new PropertyGroupDescription("Year"));
+                MoviesView.GroupDescriptions.Add(new PropertyGroupDescription("Type"));
+                MoviesView.SortDescriptions.Add(new SortDescription("Title", ListSortDirection.Ascending));
             }
         }
 
