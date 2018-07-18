@@ -91,7 +91,7 @@
                         <ListBox Name="FavoritesListBox" HorizontalAlignment="Stretch" SelectedItem="{Binding SelectedMovie}"  VerticalAlignment="Stretch" ItemsSource="{Binding FavoriteMovies}" >
                             <ListBox.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="Unfavorite" Command="{Binding RemoveFavoriteCommand}" CommandParameter="{Binding SelectedMovie}"/>
+                                    <MenuItem Header="Remove from favorites" Command="{Binding RemoveFavoriteCommand}" CommandParameter="{Binding SelectedMovie}"/>
                                 </ContextMenu>
                             </ListBox.ContextMenu>
                             <ListBox.ItemTemplate>
